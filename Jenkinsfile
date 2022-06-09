@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'paymentservice.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
